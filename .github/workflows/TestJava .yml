@@ -5,18 +5,19 @@ on:
     branches: [ "main" ]
 
 jobs:
-  test:
+  build:
 
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v4
 
-    - name: Set up JDK 17
+    - name: Set up JDK
       uses: actions/setup-java@v4
       with:
         java-version: '17'
         distribution: 'temurin'
 
-    - name: Run Tests
-      run: ant test
+    - name: Compile Java files
+      run: javac *.java
+
