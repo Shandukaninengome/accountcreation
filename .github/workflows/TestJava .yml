@@ -19,8 +19,5 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Compile project
-        run: |
-          javac Login.java
-          javac Message.java
-          javac QuickChat.java
+      - name: Compile Java files
+        run: javac *.java
